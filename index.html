@@ -9,28 +9,28 @@
     <script src="leaflet-bing-layer.js"></script>
     <link href='http://cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.css' rel='stylesheet' />
     <style>
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    #map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
-    <div id='map'></div>
+<div id='map'></div>
 
-    <script>
-    var BING_KEY = 'AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L'
+<script>
+  var BING_KEY = 'AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L'
 
-    var map = L.map('map').setView([51.505, -0.09], 13)
+  var map = L.map('map').setView([51.505, -0.09], 13)
 
-    var bingLayer = L.tileLayer.bing(BING_KEY).addTo(map)
-    </script>
+  var bingLayer = L.tileLayer.bing(BING_KEY).addTo(map)
+</script>
 </body>
 </html>
