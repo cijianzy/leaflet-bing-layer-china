@@ -74,8 +74,8 @@ L.TileLayer.Bing = L.TileLayer.extend({
   },
 
   statics: {
-    METADATA_URL: 'https://dev.virtualearth.net/REST/v1/Imagery/Metadata/{imagerySet}?key={bingMapsKey}&include=ImageryProviders&uriScheme=https',
-    POINT_METADATA_URL: 'https://dev.virtualearth.net/REST/v1/Imagery/Metadata/{imagerySet}/{lat},{lng}?zl={z}&key={bingMapsKey}&uriScheme=https'
+    METADATA_URL: 'https://dev.ditu.live.com/REST/v1/Imagery/Metadata/{imagerySet}?key={bingMapsKey}&include=ImageryProviders&uriScheme=https&c={culture}&ur=CN',
+    POINT_METADATA_URL: 'https://dev.ditu.live.com/REST/v1/Imagery/Metadata/{imagerySet}/{lat},{lng}?zl={z}&key={bingMapsKey}&uriScheme=https&c={culture}&ur=CN'
   },
 
   initialize: function (options) {
@@ -158,7 +158,7 @@ L.TileLayer.Bing = L.TileLayer.extend({
       culture: this.options.culture
     })
     if (typeof this.options.style === 'string') {
-      url += '&st=' + this.options.style
+      url += '&cstl=' + this.options.style
     }
     return url
   },
@@ -390,7 +390,7 @@ module.exports = function(bbox1, bbox2){
       throw new Error('polyfill failed because global object is unavailable in this environment');
     }
   }
-  
+
   local.fetchJsonp = fetchJsonp;
   */
 
